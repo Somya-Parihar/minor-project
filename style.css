@@ -1,0 +1,117 @@
+:root {
+    font-size: 100%;
+}
+body {
+    box-sizing: border-box;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    display:  flex;
+    flex-direction: column;
+    width: 100%;
+}
+.header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12vh;
+    padding: 0%;
+    top: 0;
+    color: rgb(43, 43, 43);
+    background-image: url('https://media.istockphoto.com/videos/vintage-ancient-historical-background-video-id482126586?s=640x640');
+    background-attachment: fixed;
+    background-size: cover;
+}
+.header >h1 {
+    margin: 0%;
+    font-size: 6vw;
+}
+.content {
+    display: grid;
+    width: 96vw;
+    padding-top: 15vh;
+    padding-bottom: 8vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: repeat(2 , 1fr);
+    row-gap: 2vh;
+    column-gap: 1vw;
+    background-color: antiquewhite;
+}
+.details {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid black;
+    background-color: rgb(255, 228, 193);
+}
+.details >img {
+    height: 31vh;
+    overflow: hidden;
+}
+.details >a {
+    text-decoration: none;
+    color: black;
+}
+.details >a :hover {
+    text-decoration: underline;
+}
+.details >img:hover {
+    transform : scale(1.1);
+    transition: all 200ms;
+}
+.details >h1 {
+    text-align: center;
+    margin: 1vh 0;
+    font-size: 2vw;
+    font-weight: 400;
+    text-decoration: underline;
+}
+.footer {
+    position: fixed;
+    text-align: center;
+    font-size: 3vh;
+    width: 100%;
+    bottom: 0;    
+    height: 5vh;
+    background-color: antiquewhite;
+}
+.footer >p {
+    margin: 0;
+    padding: 0;
+    font-size: 2vw;
+    color: rgba(0, 0, 0, 0.48);
+}
+@media (max-width: 550px) {
+    .content {
+      grid-template-rows: repeat(6,1fr);
+      grid-template-columns: repeat(1 , 1fr);
+    }
+    .header {
+        height: 10vh;
+    }
+    .details >h1 {
+        font-size: 3vh;
+    }
+    .footer >p {
+        font-size: 2vh;
+    }
+    .footer {
+        height: 4vh;
+    }
+  }
+  @media (max-width: 800px) and (min-width: 550px) {
+    .content {
+      grid-template-rows: repeat(3,1fr);
+      grid-template-columns: repeat(2 , 1fr);
+    }
+    .footer >p {
+        font-size: 2vh;
+    }
+  }
